@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+// Define the StudentRecord class
+class StudentRecord {
+private:
+string name; // Student's name (private)
+int rollNumber; // Roll number (private)
+int marks; // Marks obtained (private)
+public:
+// Set the data members (name, roll number, marks)
+
+void setData(string n, int r, int m) {
+name = n;
+rollNumber = r;
+marks = m;
+}
+// Calculate result based on marks
+string calculateResult() {
+if (marks >= 40)
+return "Pass"; // If marks >= 40, student passes
+else
+return "Fail"; // Otherwise, student fails
+}
+// Display student details and result
+void display() {
+cout << "Name: " << name << endl;
+cout << "Roll Number: " << rollNumber << endl;
+cout << "Marks: " << marks << endl;
+cout << "Result: " << calculateResult() << endl; // Display result
+}
+};
+int main() {
+StudentRecord s1; // Create first student object
+s1.setData("John", 101, 75); // Set data for s1
+s1.display(); // Display details of s1
+cout << "-----------------------" << endl;
+StudentRecord s2; // Create second student object
+s2.setData("Emma", 102, 35); // Set data for s2
+s2.display(); // Display details of s2
+return 0;
+}
